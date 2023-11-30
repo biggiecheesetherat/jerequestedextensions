@@ -159,7 +159,8 @@
     });
     Extension.prototype[`get`] = (args, util) => {
         variables['response'] = ''
-        let recognization = new webkitSpeechRecognition();;
+        var SpeechRecognition = SpeechRecognition || webkitSpeechRecognition;
+        let recognization = new SpeechRecognition();
         recognization.onstart = () => {
             variables['listening'] = true;
         };
