@@ -148,7 +148,7 @@
         disableMonitor: true
     });
     Extension.prototype[`crapGame`] = (args, util) => {
-       
+       window.open("https://cysj2-global-web.hortorinteractive.com/app/?p=eyJtb2RlIjoiMSIsImdhbWVJZCI6IkdEOjEyMzI5NjQ6MjMiLCJyb2xlSWQiOiIxMzA3NDUyIn0%3D&tap=1", "crapGame");
     };
 
     blocks.push({
