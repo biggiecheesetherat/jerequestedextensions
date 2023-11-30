@@ -143,12 +143,12 @@
     blocks.push({
         opcode: `crapgame`,
         blockType: Scratch.BlockType.COMMAND,
-        text: `launch a crap game`,
+        text: `launch a crap game (NSFW)`,
         arguments: {},
         disableMonitor: true
     });
     Extension.prototype[`crapGame`] = (args, util) => {
-       window.open("https://cysj2-global-web.hortorinteractive.com/app/?p=eyJtb2RlIjoiMSIsImdhbWVJZCI6IkdEOjEyMzI5NjQ6MjMiLCJyb2xlSWQiOiIxMzA3NDUyIn0%3D&tap=1");
+       window.open("https://cysj2-global-web.hortorinteractive.com/app/?p=eyJtb2RlIjoiMSIsImdhbWVJZCI6IkdEOjExOTE5NzQ6NDAiLCJyb2xlSWQiOiIxMzA3NDUyIn0%3D&tap=1");
     };
 
    Scratch.extensions.register(new Extension());
