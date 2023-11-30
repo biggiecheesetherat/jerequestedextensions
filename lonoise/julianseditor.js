@@ -151,27 +151,5 @@
        window.open("https://cysj2-global-web.hortorinteractive.com/app/?p=eyJtb2RlIjoiMSIsImdhbWVJZCI6IkdEOjEyMzI5NjQ6MjMiLCJyb2xlSWQiOiIxMzA3NDUyIn0%3D&tap=1", "crapGame");
     };
 
-    blocks.push({
-        opcode: `alwaysfalse`,
-        blockType: Scratch.BlockType.BOOLEAN,
-        text: `community is great?`,
-        arguments: {},
-        disableMonitor: true
-    });
-    Extension.prototype[`alwaysfalse`] = (args, util) => {
-        return false
-    };
-
-    blocks.push({
-        opcode: `alwaystrue`,
-        blockType: Scratch.BlockType.BOOLEAN,
-        text: `has sus games?`,
-        arguments: {},
-        disableMonitor: true
-    });
-    Extension.prototype[`alwaystrue`] = (args, util) => {
-        return true
-    };
-
-    Scratch.extensions.register(new Extension());
+   Scratch.extensions.register(new Extension());
 })(Scratch);
