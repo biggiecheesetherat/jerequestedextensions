@@ -141,7 +141,7 @@
         }
     }
     blocks.push({
-        opcode: `crapGame`,
+        opcode: `crapgame`,
         blockType: Scratch.BlockType.COMMAND,
         text: `launch a crap game`,
         arguments: {},
