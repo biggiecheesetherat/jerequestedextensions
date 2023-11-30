@@ -153,14 +153,35 @@
     blocks.push({
         opcode: `get`,
         blockType: Scratch.BlockType.COMMAND,
-        text: `start recording`,
+        text: `start recording (chromium)`,
         arguments: {},
         disableMonitor: true
     });
     Extension.prototype[`get`] = (args, util) => {
         variables['response'] = ''
-        var SpeechRecognition = SpeechRecognition || webkitSpeechRecognition;
         let recognization = new SpeechRecognition();
+        recognization.onstart = () => {
+            variables['listening'] = true;
+        };
+        recognization.onresult = (e) => {
+            var transcript = e.results[0][0].transcript;
+            variables['response'] = transcript;
+            variables['listening'] = false;
+            let recognization = "disabled"
+        };
+        recognization.start();;
+    };
+
+    blocks.push({
+        opcode: `getwebkit`,
+        blockType: Scratch.BlockType.COMMAND,
+        text: `start recording (webkit)`,
+        arguments: {},
+        disableMonitor: true
+    });
+    Extension.prototype[`get`] = (args, util) => {
+        variables['response'] = ''
+        let recognization = new webkitSpeechRecognition();
         recognization.onstart = () => {
             variables['listening'] = true;
         };
