@@ -147,11 +147,13 @@
         arguments: {},
         disableMonitor: true
     });
-    Extension.prototype[`crapGame`] = (args, util) => {};
+    Extension.prototype[`crapGame`] = (args, util) => {
+       
+    };
 
     blocks.push({
         opcode: `alwaysfalse`,
-        blockType: Scratch.BlockType.COMMAND,
+        blockType: Scratch.BlockType.BOOLEAN,
         text: `community is great?`,
         arguments: {},
         disableMonitor: true
@@ -162,7 +164,7 @@
 
     blocks.push({
         opcode: `alwaystrue`,
-        blockType: Scratch.BlockType.COMMAND,
+        blockType: Scratch.BlockType.BOOLEAN,
         text: `has sus games?`,
         arguments: {},
         disableMonitor: true
